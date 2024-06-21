@@ -1,0 +1,15 @@
+.about-us {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 90px;
+}
+
+p {
+    /* display: flex; */
+    text-align: center;
+}
+
+.footer {
+    left: 0;
+    right: 0;
+}

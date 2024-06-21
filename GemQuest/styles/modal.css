@@ -1,0 +1,84 @@
+/* Style the button that opens the modal */
+#open-bucketlist-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the modal itself */
+  .modal {
+    display: none; /* Initially hidden */
+    position: fixed; /* Stay in place when scrolling */
+    z-index: 1; /* Sit on top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black transparent background */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+    margin: 15% auto; /* 15% from top and centered */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%; /* Set a width */
+    position: relative;
+  }
+  
+  /* Modal Title */
+  .modal-title {
+    margin-bottom: 20px;
+  }
+  
+  /* Close Button inside the modal */
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #f00; /* Red color */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .close-btn:hover {
+    color: #000; /* Black hover color */
+  }
+  
+  /* Style the form and input field */
+  #bucketlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #bucketlist-form label {
+    font-weight: bold;
+  }
+  
+  #bucketlist-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #bucketlist-form button {
+    background-color: #333; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  #bucketlist-form button:hover {
+    background-color: #d22525; /* Darker teal hover color */
+  }
+  

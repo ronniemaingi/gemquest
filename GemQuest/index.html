@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemQuest: Find Hidden Gems</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/featured.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <script src="https://kit.fontawesome.com/31d9c192ce.js" crossorigin="anonymous"></script>
+    
+
+</head>
+
+<body>
+    <section id="header">
+        <div class="header">
+            <a href="#" class="logo">GemQuest: Find Hidden Gems</a>
+            <input type="text" class="search-bar" placeholder="Search for Gems...">
+
+            <button class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <button class="new-gem" id="open-bucketlist-btn">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="tooltip">New Gem</div>
+            </button>
+            <div id="bucketlist-modal" class="modal">
+                <div class="modal-content">
+                  <h2 class="modal-title">Add to Your Bucket List</h2>
+                  <form id="bucketlist-form">
+                    <label for="item">Bucket List Item:</label>
+                    <input type="text" id="item" name="item" placeholder="Enter your New Gem">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter the location (city, park, etc.)">
+                    <label for="budget">Estimated Budget:</label>
+                    <input type="number" id="budget" name="budget" placeholder="Enter estimated budget (optional)">
+                    <button type="submit">Add Gem</button>
+                  </form>
+                  <button id="close-modal-btn" class="close-btn">&times;</button>
+                </div>
+            </div>
+            <script src="modal.js"></script>
+
+            <button class="menu-button">
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#bucketlist">BucketList</a></li>
+                    <li><a href="about-us.html" target="_blank">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <nav class="sidebar">
+        <div class="sidebar-link">
+            <i class="fa-solid fa-house"></i>
+            <div>Home</div>
+            
+        </div>
+        <div class="sidebar-link">
+            <i class="fa-solid fa-bucket"></i>
+            <div>BucketList</div>
+        </div>
+        <div class="sidebar-link">
+            <i class="fa-solid fa-gem"></i>
+            <div>Featured</div>
+        </div>
+        <div class="sidebar-link">
+            <i class="fa-solid fa-route"></i>
+            <div>Maps</div>
+        </div>
+        <div class="profile">
+            <i class="fa-solid fa-user"></i>
+            <div>Profile</div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div id="container" class="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="next-btn">
+            <a href="#featured"><i class="fa-solid fa-angles-down fa-sm"></i></a>
+        </div>
+
+        <script src="home.js"></script>
+    </section>
+
+    <section id="featured">
+        <div class="featured-heading">
+            <div>
+                <p class="mid-header">GemQuest: Find Hidden Gems</p>
+            </div>
+            <div>
+                <h1 class="mid-header">Featured</h1>
+            </div>
+        </div>
+        
+        <button class="chevron chevron-left">&#8249;</button>
+        <div class="featured-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHw5fHxSZXN0YXVyYW50fGVufDB8fHx8MTcxNTE2NTUzMnww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1592861956120-e524fc739696?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHw5fHxSZXN0YXVyYW50fGVufDB8fHx8MTcxNTE2NTUzMnww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="Restaurants" class="featured-images">
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">Restaurants</h1>
+                    <p class="featured-caption-description">Explore top-rated dining options near you</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1705249767752-e44c6d82a89a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwxOHx8UGFya3MlMjBhbmQlMjBHYW1lc3xlbnwwfHx8fDE3MTUxNjU0OTN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1705249767752-e44c6d82a89a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwxOHx8UGFya3MlMjBhbmQlMjBHYW1lc3xlbnwwfHx8fDE3MTUxNjU0OTN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="Parks and  Gardens" class="featured-images">
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">Parks and Gardens</h1>
+                    <p class="featured-caption-description">Discover your perfect nature escape</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1498736297812-3a08021f206f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwxMXx8R2FtaW5nJTIwQXJjYWRlfGVufDB8fHx8MTcxNTE2NTQwM3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1498736297812-3a08021f206f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwxMXx8R2FtaW5nJTIwQXJjYWRlfGVufDB8fHx8MTcxNTE2NTQwM3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="Gaming Spots" class="featured-images">
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">Gaming Spots</h1>
+                    <p class="featured-caption-description">Squad Up! Find the perfect spot for your
+                        next gaming adventure</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHw0fHxHeW1zfGVufDB8fHx8MTcxNTE2NTM2M3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHw0fHxHeW1zfGVufDB8fHx8MTcxNTE2NTM2M3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="Gyms" class="featured-images">
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">Gyms</h1>
+                    <p class="featured-caption-description">Zen Out or Pump Up: Discover gyms for
+                        every fitness mood.</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwyMnx8c3BvcnRzfGVufDB8fHx8MTcxNzg2MjUyOXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1614607242094-b1b2cf769ff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHw5fHxBaXJCbkJ8ZW58MHx8fHwxNzE4OTE3MzE5fDA&ixlib=rb-4.0.3&q=80&w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="AirBnBs" class="featured-images">
+
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">AirBnbs</h1>
+                    <p class="featured-caption-description">Minimalist magic awaits: Explore modern AirBnBs with clean lines and big vibes.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1574291814206-363acdf2aa79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHw0fHxESVl8ZW58MHx8fHwxNzE4OTE5Mjg4fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1574291814206-363acdf2aa79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHw0fHxESVl8ZW58MHx8fHwxNzE4OTE5Mjg4fDA&ixlib=rb-4.0.3&q=80&w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="DIY Workshops" class="featured-images">
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">DIY Workshops</h1>
+                    <p class="featured-caption-description">Brush Up on Your Skills: Find a painting or crafting workshop that inspires you.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwxMXx8Y29taWMlMjBib29rc3RvcmV8ZW58MHx8fHwxNzE3ODYyNDU4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwxMXx8Y29taWMlMjBib29rc3RvcmV8ZW58MHx8fHwxNzE3ODYyNDU4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="Comics" class="featured-images">
+
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">Comics</h1>
+                    <p class="featured-caption-description">Dive your nose into comic stores</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwyMnx8c3BvcnRzfGVufDB8fHx8MTcxNzg2MjUyOXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                    sizes="320px"
+                    srcset="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0NTI0MTB8MHwxfHNlYXJjaHwyMnx8c3BvcnRzfGVufDB8fHx8MTcxNzg2MjUyOXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=320&amp;auto=format 320w"
+                    loading="lazy" width="full" alt="Outdoor Activities" class="featured-images">
+
+                <div class="featured-caption">
+                    <h1 class="featured-caption-heading">Outdoor Activities</h1>
+                    <p class="featured-caption-description">Get out and about and get down dirty and sweaty.</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <button class="chevron chevron-right">&#8250;</button>
+
+        <script src="featured.js"></script>
+    </section>
+
+    <section id="testimonials">
+
+    </section>
+
+    <section id="faqs">
+        <div class="wrapper">
+            <p class="faq-text">Frequently Asked Questions</p>
+            <h1>FAQs</h1>
+
+            <div class="faq">
+                <button class="accordion">
+                    What is GemQuest: Hidden Gems?
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        GemQuest: Hidden Gems is a website designed to help youth save experiences like restaurants, sports, and parks on social media platforms. It consolidates these saved locations into one place, allowing users to tick off and rate them.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion">
+                    What features does GemQuest: Hidden Gems offer?
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        GemQuest: Hidden Gems offers various features including Maps integration, integration with Uber and social media apps, a Bucket List feature, amenities, social features, reviews, star ratings, sign-up features, estimated budgets, and an AirBnBs side navigation panel.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion">
+                    How can I use the Maps feature on GemQuest: Hidden Gems?
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        The Maps feature on GemQuest: Hidden Gems allows you to view the locations of saved experiences on a map. You can easily navigate and explore different places using this feature.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion">
+                    Can I connect GemQuest: Hidden Gems with my social media accounts?
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        Yes, GemQuest: Hidden Gems allows you to connect your social media accounts. This enables you to share your saved experiences and interact with your friends on social media platforms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion">
+                    Is there a Bucket List feature in GemQuest: Hidden Gems?
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        Yes, GemQuest: Hidden Gems has a Bucket List feature. You can add experiences to your Bucket List and keep track of the places you want to visit or try in the future.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion">
+                    Does GemQuest: Hidden Gems provide estimated budgets for experiences?
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        Yes, GemQuest: Hidden Gems provides estimated budgets for experiences. This helps users plan their activities and manage their expenses accordingly.
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName
+                ("accordion");
+                var i;
+
+                for(i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        this.parentElement.classList.toggle("active");
+
+                        var pannel = this.nextElementSibling;
+
+                        if(pannel.style.display === "block") {
+                            pannel.style.display ="none";
+                        }else {
+                            pannel.style.display = "block";    
+                        }
+                    });
+
+                    
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="email">
+        <div class="main_footer">
+            <div class="alpha_footer">
+                <div class="beta_footer">
+                    <div class="delta_footer">
+                        <div class="gamma_footer">
+                            <p>Get in touch GemQuest: Find Hidden Gems</p>
+                            <h1>Contact Us</h1>
+                        </div>
+                        <div>
+                            <div>
+                                <span></span>
+                                <p>Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="omega_footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2 class="footer-logo">GemQuest: Find Hidden Gems</h2>
+                <p> Kenya</p>
+            </div>
+
+            <div class="socialmedia-section">
+                <div class="footer-content">
+                    <p class="footer-description">Follow us On</p>
+                </div>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/" target="_blank" class="social-link">
+                    <i class="fa-brands fa-square-facebook"></i> </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="social-link">
+                    <i class="fa fa-instagram"></i> </a>
+                  <a href="https://twitter.com/" target="_blank" class="social-link">
+                    <i class="fa-brands fa-x-twitter"></i> </a> 
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="spacer">
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 GemQuest: Find Hidden Gems. All rights reserved.</p>
+        </div>
+    
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
